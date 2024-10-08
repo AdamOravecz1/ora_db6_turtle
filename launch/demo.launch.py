@@ -5,7 +5,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='turtlesim',
-            namespace='turtle1',
+            # namespace='turtle1',
             executable='turtlesim_node',
             name='sim'
         ),
