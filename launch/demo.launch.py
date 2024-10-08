@@ -11,7 +11,7 @@ def generate_launch_description():
         ),
         Node(
             package='ora_db6_turtle',
-            executable='batman_draw',
+            executable='house_draw',
             output='screen',
         ),
     ])
