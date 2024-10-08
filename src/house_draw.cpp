@@ -38,12 +38,15 @@ private:
         // Draw square for the base of the house
         for (int i = 0; i < 4; i++) {
             publish_message(2.0, 0.0);   // Move forward
-            publish_message(0.0, M_PI_2); // Rotate 90 degrees
+            publish_message(0.0, -M_PI_2); // Rotate 90 degrees
         }
 
         // Draw the roof as a triangle
-        publish_message(2.0, M_PI_4); // Move forward at an angle for the roof side
-        publish_message(2.0, -M_PI_2); // Move back at an angle for the other roof side
+        publish_message(0.0, M_PI_4); 
+        publish_message(1.5, 0.0); 
+
+        publish_message(0.0, -M_PI_2); 
+        publish_message(1.5, 0.0); 
 
         RCLCPP_INFO_STREAM(this->get_logger(), "House drawing complete.");
         rclcpp::shutdown(); // Shutdown the node after drawing
